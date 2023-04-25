@@ -1,0 +1,30 @@
+body {
+    background-color: #A8DADC;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color: #1D3557;
+    ;
+}
+
+.thing {
+    color: #E63946;
+}
+
+#thing {
+    color: #457B9D;
+}
+
+button{
+    background-color: #457B9D;
+    color: #1D3557;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px;
+    border-radius: 8px;
+    
+}
+
+#image{
+    border-radius: 15px;
+}
