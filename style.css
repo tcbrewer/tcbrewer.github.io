@@ -5,30 +5,38 @@ body {
 
 header {
     background-color: #457B9D;
-    height: 250px;
+    /*height: 250px;
     display: flex;
     align-items: center;
     position: relative;
+    
+    justify-content: center;*/
     padding: 0 30px;
-    justify-content: center;
     border-radius: 15px;
   }
 
   header .header-content {
-    max-width: 1100px;
+    /*max-width: 1100px;*/
     display: flex;
-    width: 100%;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    /*width: 100%;
+    justify-content: center;*/
     align-items: center;
   }
+
+  #div1 {
+    width: fit-content;
+
+}
 
   header img {
     border-radius: 15px;
     width: 162px;
     height: 210px;
     object-fit: cover;
-    margin-right: 700px;
-    margin-top: 105px;
+    margin: 10px;
   }
 
   header h1 {
@@ -44,7 +52,6 @@ header {
 
 p {
     color: #1D3557;
-    ;
 }
 
 .thing {
@@ -55,12 +62,13 @@ p {
     color: #457B9D;
 }
 
-button{
-    background-color: #457B9D;
-    color: #1D3557;
+button {
+    /*background-color: #457B9D;*/
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 15px;
     border-radius: 8px;
+    margin: 10px;
     
 }
 
@@ -68,5 +76,37 @@ button{
     border-radius: 15px;
 }
 
+#email{
+  background-color: #457B9D;
+}
+
+#resume {
+  background-color: #1D3557;
+}
 
 
+a {
+  border-style: solid;
+  width: fit-content;
+  background-color: #457B9D;
+  color: #1D3557;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+
+#title{
+  color:#1D3557
+}
+
+
+#pets {
+  width: fit-content;
+  border-radius: 15px;
+  width: 162px;
+  height: 210px;
+  margin: 10px;
+  object-fit: cover;
+}

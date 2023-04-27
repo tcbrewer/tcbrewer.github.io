@@ -7,28 +7,32 @@
     </head>
     <body>
         <header>
-            <div class="header content">
-                <img src ="profile.JPG" alt="picture">
+            <div class="header-content">
+                <div id="div1">
+                    <img src ="profile.JPG" alt="picture">
+                </div>
                 <div>
-                    <h1>Theodora (Teddy) Brewer<h1>
+                    <h1>Theodora (Teddy) Brewer</h1>
                     <h2>Physics and Computer Science Major</h2>
-                <div>
+                </div>
             </div>
         </header>
-        <button>This is a button</button>
-        <p>Hello</p> 
-        <p class = "thing">This is a new paragraph</p>
-        <p id = "thing">Third p</p>
-        <p>This</p>
-        <form action="/submission.html">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="email">Email:</label><br>
-            <input type="text" id="lname" name="lname"><br>
-            <label for="message">Message:</label><br>
-            <input type="text" id="message" name="MESSAGE"><br><br>
-            <input type="submit" value="Submit">
-          </form>
+        <div id="buttons">
+            <button id = "email" onclick="window.location.href='mailto: tcbrewer@willamette.edu';">Send Email</button>
+            <button id = "resume" onclick="window.location.href='Resume1.pdf';">Resume</button>
+            <button id = "email" onclick="window.location.href='https://github.com/tcbrewer';">Github</button>
+            <button id = "resume" onclick="window.location.href='https://github.com/tcbrewer/Cops_and_Clicks';">Crops and Clicks: Farm Game</button>
+        </div>
+        
+        <h1 id="title">About Me:</h1> 
+        <p>I am a 3rd year Student at Willamette University pursuing a batchelors in physics and computer science. Some of my hobbies include swimming, drawing, playing games, watching movies, and throwing on a pottery wheel. I am a proud mom of three fur babies and hope to become an environmental engineer one day. </p><br>
+        <h2 id="thing">Here are some pictures of my fur babies</h2>
+        <div id="pets">
+            <img src = "Millie.JPG" alt="Millie">
+            <img src = "Yuki.JPG" alt="Yuki">
+            <img src = "Kona.JPG" alt="Kona">
+        </div>
+        
     </body>
 </html>
 
