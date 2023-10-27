@@ -1,9 +1,3 @@
-layout: page
-title: "CV"
-permalink: /cv
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
