@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+
 <html>
     <head>
-        <title>Teddy's Website-CV</title>
+        #<title>Teddy's Website-CV</title>
         <link rel="stylesheet" href="style.css"/>
         
     </head>
