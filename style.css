@@ -1,112 +1,305 @@
+:root {
+  --text-color: #012840;
+  --link-color: #03738C;
+  --background-color: #96D2D9;
+  --hover-text-color: #3FA8BF; /* Add hover color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: #A8DADC;
+    background-color: var(--background-color);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-header {
-    background-color: #457B9D;
-    /*height: 250px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    
-    justify-content: center;*/
-    padding: 0 30px;
-    border-radius: 15px;
-  }
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
 
-  header .header-content {
-    /*max-width: 1100px;*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    /*width: 100%;
-    justify-content: center;*/
-    align-items: center;
-  }
+p {
+  color: var(--text-color);
+}
 
-  #div1 {
-    width: fit-content;
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+  background-color: var(--background-color);
+  transition: 0.3 ease;
+  flex-wrap: wrap; 
+}
+
+nav .left a {
+  color: var(--text-color);
+  font-size: 30px;
+  font-weight: 600;
 
 }
 
-  header img {
-    border-radius: 15px;
-    width: 162px;
-    height: 210px;
-    object-fit: cover;
-    margin: 10px;
+nav .right a {
+  color: var(--text-color);
+  font-size: 25px;
+  font-weight: 500;
+  flex-wrap: wrap; /* Ensures links don’t overflow in smaller screens */
+  gap: 10px;
+  margin: 0 10px;
+}
+
+nav .right a:last-child{
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+nav .center a {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+nav a:hover {
+  color: var(--hover-text-color); /* Changes text color on hover */
+}
+
+nav .right a:last-child:hover {
+  color: var(--hover-text-color); /* Changes text color on hover */
+  background-color: var(--link-color); /* Optional: Background color change */
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the links horizontally */
+  align-items: center;    /* Centers the links vertically if needed */
+  padding: 20px;
+}
+
+/* SECTION !: Hero */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 50px 0;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.hero-section .headshot {
+  flex: 2;
+}
+
+.hero-section .headshot img{
+  width: 350px;
+  border-radius: 50%;
+}
+
+.hero-section .text {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.hero-section .text h2 {
+  font-size: 45px;
+  color: var(--text-color);
+}
+
+
+/* SECTION CV*/
+.cv-section {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 50px;
+  margin: 50px 0;
+  gap: 40px;
+  margin-bottom: 100px;
+  color: var(--text-color);
+}
+
+ul {
+  list-style-type: circle; /* Changes the bullet point to a square */
+}
+
+.cv-section .stickydiv {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: var(--hover-text-color);
+  padding: 20px;
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+  margin-bottom: 40px;
+  
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.cv-section .stickydiv .links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  color: var(--text-color);
+}
+
+.cv-section .stickydiv a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: .1s;
+  color: var(--text-color);
+  gap: 10px;
+}
+
+.cv-section .stickydiv a:hover {
+  color: var(--background-color);
+}
+
+.cv-section .stickydiv .links a {
+  display: flex;
+  transition: .1s;
+  color: var(--text-color);
+}
+
+.cv-section .stickydiv .links a:hover {
+  color: var(--background-color);
+}
+
+.cv-section .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cv-section .button-container .action h5 {
+  font-size: 20px;
+  margin: 0;
+  display: inline;
+}
+
+.cv-section .button-container .action h6 {
+  font-size: 17px;
+  margin: 0;
+  display: inline;
+}
+
+ .action {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1.5px solid var(--text-color);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: var(--background-color) 0.3s ease;
+  width: 75vw;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+.action:hover {
+  background-color: var(--link-color);
+}
+
+.hide {
+  display: none;
+  padding: 10px, 10px;
+  margin: 10px 0;
+  color: var(--text-color);
+  border-radius: 5px;
+}
+
+.show {
+  display:block;
+}
+
+@media (max-width:850px) {
+  /* SECTION 1: Hero */
+  .hero-section .text h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width:740px) {
+  /* SECTION 1: Hero */
+  .hero-section {
+    flex-direction: column;
+  }
+  .hero-section .headshot img {
+    width: 300px;
   }
 
-  header h1 {
-    font-size: 28px;
-    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column; /* Stacks items vertically */
+    padding: 10px 20px; /* Reduces padding for smaller screens */
+  }
+
+  nav .left a {
+    font-size: 20px; /* Adjusts font size */
     margin-bottom: 10px;
   }
 
-  header h2 {
-    font-size: 22px;
-    margin-top: 0;
+  nav .right a {
+    font-size: 18px; /* Adjusts font size for links */
+  }
+  footer a {
+    font-size: 16px; /* Adjust footer link size on smaller screens */
+    margin: 10px;
   }
 
-p {
-    color: #1D3557;
-}
+  /* SECTION 1: Hero */
+  .hero-section {
+    padding: 0 20px;
+  }
 
-.thing {
-    color: #d39353;
-}
+  .hero-section .text h2{
+    font-size: 30px;
 
-#thing {
-    color: #457B9D;
-}
+  }
 
-button {
-    /*background-color: #457B9D;*/
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 10px;
-    
-}
+  .action {
+    width: 100%; /* Revert to full width on smaller screens */
+  }
 
-#image{
-    border-radius: 15px;
-}
 
-#email{
-  background-color: #457B9D;
-}
-
-#resume {
-  background-color: #1D3557;
 }
 
 
-a {
-  border-style: solid;
-  width: fit-content;
-  background-color: #457B9D;
-  color: #1D3557;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 10px;
-}
 
 
-#title{
-  color:#1D3557
-}
 
 
-img {
-  width: fit-content;
-  border-radius: 15px;
-  width: 162px;
-  height: 210px;
-  margin: 10px;
-  object-fit: cover;
-}
+
